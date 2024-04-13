@@ -25,7 +25,10 @@ class FeatureController < ApplicationController
       render json: { error: "El parámetro per_page debe ser menor que 1000" }, status: :unprocessable_entity
     else
 
-      render json: [data: features, pagination: pagination_dict(features)]
+
+      features_serializados = features.map { |feature| FeatureSerializer.new(feature) }
+
+      render json: [data: features_serializados, pagination: pagination_dict(features)]
     end
 
 
