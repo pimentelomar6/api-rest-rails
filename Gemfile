@@ -11,7 +11,7 @@ gem "will_paginate"
 
 gem "custom_validators"
 
-
+gem "rack-cors"
 gem 'active_model_serializers'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
