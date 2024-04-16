@@ -74,4 +74,31 @@ Iniciar Servidor
 ```
 
 
+## API Reference
+
+#### Listado de Features
+
+```http
+  GET /api/features?page=20&per_page=10&mag_type=ml
+```
+
+| Parametro | Tipo     | Descripcion                |
+| :-------- | :------- | :------------------------- |
+| `page` | `number` | Numero de paginas totales |
+| `per_page` | `number` | Items por pagina |
+| `mag_type` | `string` | Filtro por mag_type |
+
+
+
+#### Agregar comentario 
+
+```http
+  POST /api/features/${feature_id}/comments
+```
+
+| Parametro | Tipo     | Descripcion                       |
+| :-------- | :------- | :-------------------------------- |
+| `feature_id`      | `number` | Id del feature commentado |
+
+
 
